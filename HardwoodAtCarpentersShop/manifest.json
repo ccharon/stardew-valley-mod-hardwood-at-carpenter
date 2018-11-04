@@ -1,0 +1,10 @@
+﻿{
+  "Name": "hardwood at carpenter's shop",
+  "Author": "Christian Charon",
+  "Version": "1.0.0",
+  "Description": "Robin now sells hardwood for 750 gold each.",
+  "UniqueID": "chcharon.hardwoodAtCarpentersShop",
+  "EntryDll": "hardwood.dll",
+  "MinimumApiVersion": "2.0",
+  "UpdateKeys": []
+}
