@@ -12,7 +12,8 @@ namespace HardwoodAtCarpentersShop
     {
         private const int woodItemId = 388;
         private const int hardwoodItemId = 709;
-        private const int hardwoodPrice = 750;
+        // based on the price of wood, buy for 50, sell for 2, i choose 450 as hardwood sells for 15
+        private const int hardwoodPrice = 450;
 
         public override void Entry(IModHelper helper)
         {
