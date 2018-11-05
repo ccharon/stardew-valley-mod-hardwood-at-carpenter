@@ -45,7 +45,7 @@ namespace HardwoodAtCarpentersShop
         int GetWoodPosition(List<Item> items) 
         {
             int woodPosition = items.FindIndex(item => item.parentSheetIndex == woodItemId);
-            return (woodPosition >= 0) ? woodPosition : items.Capacity;
+            return (woodPosition >= 0) ? woodPosition : items.Count;
         }
     }
 }
