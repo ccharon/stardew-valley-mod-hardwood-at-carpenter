@@ -5,4 +5,4 @@ a simple Stardew Valley mod that adds hardwood to the carpenters shop inventory 
 based on:
 https://github.com/IrregularPorygon/SMAPIGenericShopMod/tree/master/GenericShopExtender
 
-which is a lot more configureable, but i only needed hardwood! :P
+which is a lot more configureable, but i only needed hardwood and i wanted it to be in the list right after regular wood! :P
