@@ -8,7 +8,7 @@ using Object = StardewValley.Object;
 
 namespace HardwoodAtCarpentersShop
 { 
-    public class HardwoodAtCarpenterShop : Mod
+    public class HardwoodAtCarpentersShop : Mod
     {
         private const int WoodItemId = 388;
         private const int HardwoodItemId = 709;
@@ -21,8 +21,7 @@ namespace HardwoodAtCarpentersShop
 
         private void OnMenuChanged(object sender, MenuChangedEventArgs eventArgs)
         {
-            if (!(eventArgs.NewMenu is ShopMenu shopMenu) || 
-                !shopMenu.portraitPerson.Equals(Game1.getCharacterFromName("Robin"))) return;
+            if (!(eventArgs.NewMenu is ShopMenu shopMenu) || !shopMenu.portraitPerson.Equals(Game1.getCharacterFromName("Robin"))) return;
 
             Item hardwoodItem = new Object(Vector2.Zero, HardwoodItemId, ShopMenu.infiniteStock);
 
