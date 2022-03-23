@@ -25,13 +25,13 @@ namespace HardwoodAtCarpentersShop
 
             Item hardwoodItem = new Object(Vector2.Zero, HardwoodItemId, ShopMenu.infiniteStock);
 
-            IReflectedField<List<ISalable>> forSaleInformation = Helper.Reflection.GetField<List<ISalable>>(shopMenu, "forSale");
-            List<ISalable> forSale = forSaleInformation.GetValue();
-            int woodItemPosition = forSale.FindIndex(salable => salable is Item item && item.parentSheetIndex.Equals(WoodItemId));
+            var forSaleInformation = Helper.Reflection.GetField<List<ISalable>>(shopMenu, "forSale");
+            var forSale = forSaleInformation.GetValue();
+            var woodItemPosition = forSale.FindIndex(salable => salable is Item item && item.ParentSheetIndex.Equals(WoodItemId));
             forSale.Insert(woodItemPosition + 1, hardwoodItem);
-
-            IReflectedField<Dictionary<ISalable, int[]>> inventoryInformation = Helper.Reflection.GetField<Dictionary<ISalable, int[]>>(shopMenu, "itemPriceAndStock");
-            Dictionary<ISalable, int[]> itemPriceAndStock = inventoryInformation.GetValue();
+            
+            var inventoryInformation = Helper.Reflection.GetField<Dictionary<ISalable, int[]>>(shopMenu, "itemPriceAndStock");
+            var itemPriceAndStock = inventoryInformation.GetValue();
             itemPriceAndStock.Add(hardwoodItem, new[] {HardwoodPrice, ShopMenu.infiniteStock});
         }
     }
